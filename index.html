@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odonto QualityBH Dentista – Odontoprev, Bradesco Dental, Sulamérica Odonto</title>
+  <meta name="description" content="Atendimento odontológico cuidadoso e acolhedor em Belo Horizonte. Inicie seu atendimento ou tire dúvidas pelo WhatsApp oficial.">
+  
+  <!-- Fontes Google com fallback -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Configuração Tailwind Obrigatória Exata -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "marca": "#039874",
+            "marca-forte": "#027A60",
+            "superficie": "#ECFDF6",
+            "tinta": "#18181B",
+            "suave": "#71717A"
+          },
+          fontFamily: {
+            "titulo": ["Plus Jakarta Sans", "sans-serif"],
+            "corpo": ["Inter", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Escala e Ritmo Obrigatórios */
+    .hero-title {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+    .section-title {
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+    .body-editorial {
+      font-size: 1.0625rem; /* 17px */
+      line-height: 1.62;
+      max-width: 65ch;
+    }
+    .eyebrow {
+      font-size: 0.75rem; /* 12px */
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    
+    /* Animações CSS com regras restritas e prefers-reduced-motion */
+    @keyframes heroFadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .anim-entry {
+      animation: heroFadeIn 600ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .anim-delay-1 { animation-delay: 80ms; }
+    .anim-delay-2 { animation-delay: 160ms; }
+    .anim-delay-3 { animation-delay: 240ms; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-superficie text-tinta font-corpo selection:bg-marca selection:text-white antialiased min-h-screen flex flex-col">
+
+  <!-- Navegação Institucional -->
+  <header class="w-full bg-superficie border-b border-tinta/10 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#inicio" class="flex flex-col text-left focus:outline-none focus:ring-2 focus:ring-marca rounded-lg">
+        <span class="font-titulo font-bold text-lg text-tinta tracking-tight">Odonto QualityBH</span>
+        <span class="font-corpo text-xs text-suave -mt-0.5">Atendimento Odontológico</span>
+      </a>
+
+      <!-- Menu Desktop -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#inicio" class="text-sm font-medium text-tinta hover:text-marca transition-colors focus:outline-none focus:ring-2 focus:ring-marca rounded px-2 py-1">Início</a>
+        <a href="#atendimento" class="text-sm font-medium text-tinta hover:text-marca transition-colors focus:outline-none focus:ring-2 focus:ring-marca rounded px-2 py-1">Atendimento</a>
+        <a href="#canais" class="text-sm font-medium text-tinta hover:text-marca transition-colors focus:outline-none focus:ring-2 focus:ring-marca rounded px-2 py-1">Canais Oficiais</a>
+        <a href="https://wa.me/5531989081171" target="_blank" rel="noopener noreferrer" class="bg-marca hover:bg-marca-forte text-white font-titulo font-semibold text-sm px-5 py-2.5 rounded-xl transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-marca-forte">
+          Iniciar conversa
+        </a>
+      </nav>
+
+      <!-- Menu Mobile Nativo com details/summary -->
+      <details class="md:hidden relative group">
+        <summary class="list-none p-2 rounded-xl text-tinta focus:outline-none focus:ring-2 focus:ring-marca cursor-pointer select-none" aria-label="Abrir menu">
+          <svg class="w-6 h-6 stroke-current fill-none" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </summary>
+        <div class="absolute right-0 top-full mt-2 w-56 bg-superficie border border-tinta/10 rounded-xl shadow-lg p-3 flex flex-col gap-2 z-50">
+          <a href="#inicio" class="px-3 py-2 text-sm font-medium text-tinta hover:bg-marca/10 rounded-lg">Início</a>
+          <a href="#atendimento" class="px-3 py-2 text-sm font-medium text-tinta hover:bg-marca/10 rounded-lg">Atendimento</a>
+          <a href="#canais" class="px-3 py-2 text-sm font-medium text-tinta hover:bg-marca/10 rounded-lg">Canais Oficiais</a>
+          <a href="https://wa.me/5531989081171" target="_blank" rel="noopener noreferrer" class="px-3 py-2 text-sm font-semibold bg-marca text-white rounded-lg text-center mt-1">
+            WhatsApp Oficial
+          </a>
+        </div>
+      </details>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- Seção 1: Hero Editorial / Abertura (Composição Vertical, espaço negativo e fotografia que toca a grade) -->
+    <section id="inicio" class="relative pt-12 md:pt-20 pb-16 md:pb-24 overflow-hidden border-b border-tinta/5">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Bloco de Identidade e Abertura Textual -->
+        <div class="max-w-3xl anim-entry">
+          <p class="eyebrow text-marca font-titulo font-bold mb-3">Atendimento Odontológico • Belo Horizonte</p>
+          <h1 class="hero-title font-titulo font-extrabold text-tinta text-left mb-6">
+            Odonto QualityBH Dentista
+          </h1>
+          <p class="body-editorial text-suave mb-8 text-left anim-entry anim-delay-1">
+            Atendimento odontológico cuidadoso e receptivo para você e sua família, com suporte aos conveniados Odontoprev, Bradesco Dental e Sulamérica Odonto.
+          </p>
+
+          <!-- CTA com superfície translúcida, borda interna e contraste rigoroso -->
+          <div class="inline-block p-1.5 rounded-2xl bg-white/70 backdrop-blur-sm border border-tinta/10 shadow-sm anim-entry anim-delay-2 mb-10">
+            <a href="https://wa.me/5531989081171" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-marca hover:bg-marca-forte text-white font-titulo font-semibold px-6 py-4 rounded-xl transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-marca-forte text-base">
+              <!-- Ícone WhatsApp SVG Inline -->
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12.031 2C6.496 2 2 6.502 2 12.046c0 1.77.462 3.498 1.339 5.02L2 22l5.068-1.332a9.99 9.99 0 0 0 4.963 1.378h.004c5.532 0 10.03-4.502 10.03-10.046 0-2.684-1.045-5.207-2.943-7.106A9.97 9.97 0 0 0 12.031 2zm5.836 14.195c-.244.686-1.42 1.309-1.956 1.393-.497.078-1.127.112-3.606-.913-2.64-1.092-4.323-3.791-4.453-3.966-.13-.174-1.06-1.41-1.06-2.69 0-1.28.67-1.91.908-2.164.238-.255.518-.318.692-.318.173 0 .346.002.497.009.16.007.375-.06.586.446.216.518.736 1.796.8 1.927.065.13.108.282.022.455-.087.173-.13.282-.26.433-.13.152-.272.339-.39.455-.13.13-.265.27-.114.53.151.26.673 1.109 1.442 1.794.99.882 1.824 1.155 2.083 1.285.26.13.412.109.564-.065.152-.174.65-.757.823-1.017.173-.26.347-.217.585-.13.238.087 1.516.714 1.776.844.26.13.433.195.498.303.065.109.065.628-.179 1.314z"/>
+              </svg>
+              <span>Conversar pelo WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Fotografia Contextual que toca a grade de forma editorial -->
+        <div class="w-full mt-4 anim-entry anim-delay-3">
+          <div class="relative w-full rounded-2xl overflow-hidden border border-tinta/10 shadow-sm bg-white">
+            <img 
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJssOCgdD2WGwTMUlyh3RFF_evb6-aAAVo05vNkGUUEEHiB61kNGICPLy9-EQhmmmKhpcgV_Zjdtcf1MByWbJi9p5ykHK9KhGmFucZ7qJRw8EK-UiUvQ076NmphUn3-qKBRcuPeit-10nXfWCI-16KG9BfIJqdwERQlG7hf2zvePjbwkWRP48pRqP0blKes0eRdnyo51ZfsLJX1-GsOLRhrQBonFbkJjjwmfECHm62ir9a2j5hFhVt4ldp72s1SpjlmXrsrtvPvx0l" 
+              alt="Ambiente de acolhimento e recepção moderna da clínica odontológica com iluminação natural e design limpo"
+              width="1200" 
+              height="800" 
+              class="w-full h-[320px] sm:h-[420px] md:h-[560px] object-cover object-center"
+            >
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Seção 2: Contexto de Atendimento e Acolhimento -->
+    <section id="atendimento" class="py-16 md:py-24 border-b border-tinta/5">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-2xl mb-12">
+          <p class="eyebrow text-marca font-titulo font-bold mb-3">Cuidado e Atenção</p>
+          <h2 class="section-title font-titulo font-bold text-tinta">
+            Um ambiente pensado para a sua tranquilidade
+          </h2>
+        </div>
+
+        <!-- Composição Assimétrica Editorial -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+          <div class="md:col-span-7 bg-white/60 border border-tinta/10 p-8 rounded-2xl">
+            <h3 class="font-titulo font-bold text-xl text-tinta mb-4">Atendimento humanizado e focado no paciente</h3>
+            <p class="body-editorial text-suave">
+              A Odonto QualityBH busca oferecer uma experiência confortável desde o primeiro contato. Nosso espaço e conduta priorizam acolhimento, escuta atenta e orientação clara para que suas consultas aconteçam com confiança e bem-estar.
+            </p>
+          </div>
+
+          <div class="md:col-span-5 bg-white/60 border border-tinta/10 p-8 rounded-2xl">
+            <h3 class="font-titulo font-bold text-xl text-tinta mb-4">Convênios e Planos</h3>
+            <p class="body-editorial text-suave">
+              Oferecemos suporte e atendimento aos beneficiários das principais operadoras odontológicas informadas: 
+              <span class="font-semibold text-tinta">Odontoprev</span>, 
+              <span class="font-semibold text-tinta">Bradesco Dental</span> e 
+              <span class="font-semibold text-tinta">Sulamérica Odonto</span>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 3: Informações e Orientações aos Pacientes (Lista Editorial) -->
+    <section class="py-16 md:py-24 border-b border-tinta/5">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-2xl mb-12">
+          <p class="eyebrow text-marca font-titulo font-bold mb-3">Como Funciona</p>
+          <h2 class="section-title font-titulo font-bold text-tinta">
+            Orientações para o seu atendimento
+          </h2>
+        </div>
+
+        <!-- Lista Editorial com Escalas Diferenciadas -->
+        <div class="divide-y divide-tinta/10 border-y border-tinta/10">
+          <div class="py-6 flex flex-col md:flex-row md:items-baseline justify-between gap-4">
+            <span class="font-titulo font-bold text-lg text-tinta md:w-1/3">1. Primeiro contato</span>
+            <p class="text-suave md:w-2/3 leading-relaxed">
+              Inicie uma conversa diretamente pelo WhatsApp ou faça uma ligação telefônica para consultar datas, horários disponíveis e tirar dúvidas iniciais.
+            </p>
+          </div>
+          <div class="py-6 flex flex-col md:flex-row md:items-baseline justify-between gap-4">
+            <span class="font-titulo font-bold text-lg text-tinta md:w-1/3">2. Verificação de convênio</span>
+            <p class="text-suave md:w-2/3 leading-relaxed">
+              Caso utilize Odontoprev, Bradesco Dental ou Sulamérica Odonto, tenha em mãos os dados da carteirinha durante o contato para conferência da cobertura.
+            </p>
+          </div>
+          <div class="py-6 flex flex-col md:flex-row md:items-baseline justify-between gap-4">
+            <span class="font-titulo font-bold text-lg text-tinta md:w-1/3">3. Consulta e avaliação</span>
+            <p class="text-suave md:w-2/3 leading-relaxed">
+              No dia do atendimento, apresente um documento oficial com foto e o comprovante do plano para início da sua consulta clínica.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 4: Canais Oficiais e Localização Factual -->
+    <section id="canais" class="py-16 md:py-24 border-b border-tinta/5">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-2xl mb-12">
+          <p class="eyebrow text-marca font-titulo font-bold mb-3">Canais de Contato</p>
+          <h2 class="section-title font-titulo font-bold text-tinta">
+            Fale diretamente com nossa equipe
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Bloco WhatsApp -->
+          <div class="bg-white/70 border border-tinta/10 p-8 rounded-2xl flex flex-col justify-between">
+            <div>
+              <p class="eyebrow text-marca font-titulo font-bold mb-2">WhatsApp</p>
+              <h3 class="font-titulo font-bold text-xl text-tinta mb-2">(31) 98908-1171</h3>
+              <p class="text-sm text-suave mb-6">Canal direto e ágil para mensagens, agendamentos e informações sobre convênios.</p>
+            </div>
+            <a href="https://wa.me/5531989081171" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-marca font-titulo font-semibold text-sm hover:underline">
+              <span>Iniciar conversa</span>
+              <svg class="w-4 h-4 stroke-current fill-none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+
+          <!-- Bloco Telefone -->
+          <div class="bg-white/70 border border-tinta/10 p-8 rounded-2xl flex flex-col justify-between">
+            <div>
+              <p class="eyebrow text-suave font-titulo font-bold mb-2">Telefone</p>
+              <h3 class="font-titulo font-bold text-xl text-tinta mb-2">(31) 98908-1171</h3>
+              <p class="text-sm text-suave mb-6">Disponível para ligações telefônicas diretas com nossa recepção.</p>
+            </div>
+            <a href="tel:31989081171" class="inline-flex items-center gap-2 text-tinta font-titulo font-semibold text-sm hover:text-marca">
+              <span>Ligar agora</span>
+              <svg class="w-4 h-4 stroke-current fill-none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+
+          <!-- Bloco Perfil Google Maps -->
+          <div class="bg-white/70 border border-tinta/10 p-8 rounded-2xl flex flex-col justify-between">
+            <div>
+              <p class="eyebrow text-suave font-titulo font-bold mb-2">Localização</p>
+              <h3 class="font-titulo font-bold text-xl text-tinta mb-2">Google Maps</h3>
+              <p class="text-sm text-suave mb-6">Consulte a rota e localização confirmada diretamente pelo perfil no mapa.</p>
+            </div>
+            <a href="https://maps.google.com/?cid=7343551159693336170&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-tinta font-titulo font-semibold text-sm hover:text-marca">
+              <span>Abrir no Google Maps</span>
+              <svg class="w-4 h-4 stroke-current fill-none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 5: Fechamento Comercial / CTA Final Conclusivo -->
+    <section class="py-16 md:py-24 bg-superficie">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <h2 class="section-title font-titulo font-bold text-tinta mb-4">
+          Pronto para cuidar do seu sorriso?
+        </h2>
+        <p class="body-editorial text-suave mx-auto mb-8">
+          Fale com a Odonto QualityBH pelo WhatsApp oficial para agendamento de consultas e esclarecimento de dúvidas.
+        </p>
+        <div class="inline-block p-1.5 rounded-2xl bg-white/80 border border-tinta/10 shadow-sm">
+          <a href="https://wa.me/5531989081171" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-marca hover:bg-marca-forte text-white font-titulo font-semibold px-8 py-4 rounded-xl transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-marca-forte text-base">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12.031 2C6.496 2 2 6.502 2 12.046c0 1.77.462 3.498 1.339 5.02L2 22l5.068-1.332a9.99 9.99 0 0 0 4.963 1.378h.004c5.532 0 10.03-4.502 10.03-10.046 0-2.684-1.045-5.207-2.943-7.106A9.97 9.97 0 0 0 12.031 2zm5.836 14.195c-.244.686-1.42 1.309-1.956 1.393-.497.078-1.127.112-3.606-.913-2.64-1.092-4.323-3.791-4.453-3.966-.13-.174-1.06-1.41-1.06-2.69 0-1.28.67-1.91.908-2.164.238-.255.518-.318.692-.318.173 0 .346.002.497.009.16.007.375-.06.586.446.216.518.736 1.796.8 1.927.065.13.108.282.022.455-.087.173-.13.282-.26.433-.13.152-.272.339-.39.455-.13.13-.265.27-.114.53.151.26.673 1.109 1.442 1.794.99.882 1.824 1.155 2.083 1.285.26.13.412.109.564-.065.152-.174.65-.757.823-1.017.173-.26.347-.217.585-.13.238.087 1.516.714 1.776.844.26.13.433.195.498.303.065.109.065.628-.179 1.314z"/>
+            </svg>
+            <span>Iniciar conversa no WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé Factual -->
+  <footer class="w-full bg-superficie border-t border-tinta/10 py-10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex flex-col text-center md:text-left">
+        <span class="font-titulo font-bold text-sm text-tinta">Odonto QualityBH Dentista</span>
+        <span class="text-xs text-suave mt-1">Odontoprev • Bradesco Dental • Sulamérica Odonto</span>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-suave">
+        <a href="https://www.clinicaodontoqualitybh.com.br/" target="_blank" rel="noopener noreferrer" class="hover:text-marca transition-colors">Website institucional</a>
+        <a href="https://maps.google.com/?cid=7343551159693336170&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener noreferrer" class="hover:text-marca transition-colors">Google Maps</a>
+        <a href="tel:31989081171" class="hover:text-marca transition-colors">Telefone: (31) 98908-1171</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
